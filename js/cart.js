@@ -3,12 +3,11 @@
 var Cart = [];
 
 // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
-var table = document.getElementById('cart');
-table.addEventListener('click', removeItemFromCart);
+// var table = document.getElementById('cart');
+// table.addEventListener('click', removeItemFromCart);
 
 function loadCart() {
   Cart = JSON.parse(localStorage.getItem('cart')) || [];
-  console.log(Cart);
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -20,9 +19,11 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  var tableLocation = document.getElementById('cart').children[1];
-  for (var i = 0; i < Cart; i++) {
-    tableLocation.removeChild();
+  var tableRows = document.querySelectorAll('#cart tbody tr');
+  for(var i = 0; i < tableRows.length; i++){
+    if(tableRows[i]){
+      tableRows[i].remove();
+    }
   }
 }
 
@@ -38,7 +39,11 @@ function showCart() {
   for (var i = 0; i < Cart.length; i++) {
     var tableRow = document.createElement('tr');
     var deleteLink = document.createElement('td');
-    deleteLink.innerHTML = '<button type=\"button\" class=\"button' + i + '\">X</button>';
+    var button = document.createElement('button');
+    button.textContent = 'X';
+    button.setAttribute('data-id', i);
+    button.addEventListener('click', removeItemFromCart);
+    deleteLink.appendChild(button);
     tableRow.appendChild(deleteLink);
     var quantityData = document.createElement('td');
     quantityData.textContent = Cart[i].quantity;
@@ -49,17 +54,19 @@ function showCart() {
     tableLocation.appendChild(tableRow);
 
   }
-  deleteLink.addEventListener('click', removeItemFromCart);
+  
 
 }
 
 function removeItemFromCart(event) {
 
   // TODO: When a delete link is clicked, rebuild the Cart array without that item
-  console.log(event.target);
-  // var deletedItem = event.target
+  Cart.splice(event.target.dataset.id, 1);
+  console.log(Cart);
   // TODO: Save the cart back to local storage
+  localStorage.setItem('cart', JSON.stringify(Cart));
   // TODO: Re-draw the cart table
+  renderCart();
 
 }
 
