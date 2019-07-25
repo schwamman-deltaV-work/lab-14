@@ -77,7 +77,7 @@ function updateCartPreview() {
   // TODO: Add a new element to the cartContents div with that inform
 }
 
-console.log(updateCartPreview());
+// console.log(updateCartPreview());
 
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
