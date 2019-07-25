@@ -7,8 +7,10 @@
 var Cart = function(item, quantity) {
   this.item = item;
   this.quantity = quantity;
+  Cart.allItems.push(this);
 
 }
+Cart.allItems = [];
 
 
 // Product Contructor
