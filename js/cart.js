@@ -25,6 +25,7 @@ function clearCart() {
       tableRows[i].remove();
     }
   }
+
 }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
@@ -33,6 +34,9 @@ function showCart() {
   // TODO: Find the table body
   var tableLocation = document.getElementById('cart').children[1];
   // TODO: Iterate over the items in the cart
+  for (var i = 0; i < Cart.length; i++) {
+    console.log(Cart[i]);
+  }
   // TODO: Create a TR
   // TODO: Create a TD for the delete link, quantity,  and the item
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
