@@ -47,8 +47,13 @@ function updateCounter() {}
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+  var quantity = document.getElementById('quantity');
+  var item = document.getElementById('items');
+  var contents = document.getElementById('cartContents');
+
+  
   // TODO: Add a new element to the cartContents div with that information
-}
+}`1`
 
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
