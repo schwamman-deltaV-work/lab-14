@@ -52,10 +52,15 @@ function updateCartPreview() {
   var quantity = document.getElementById('quantity');
   var item = document.getElementById('items');
   var contents = document.getElementById('cartContents');
+  var list = document.createElement('ul');
+  var listItem = document.createElement('li');
 
-  cartContents.appendChild(items);
-  cartContents.appendChild(quantity);
+
   // TODO: Add a new element to the cartContents div with that information
+  cartContents.appendChild(list);
+  listItem.textContent = ;
+  cartContents.appendChild(listItem);
+
 }
 
 `1`;
