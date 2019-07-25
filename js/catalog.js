@@ -7,13 +7,13 @@
 function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
- var selectElement = document.getElementById('items');
- for (var i = 0; i < Product.allProducts.length; i++) {
-   var listItem = document.createElement('option');
-   listItem.textContent = Product.allProducts[i].name;
-   listItem.setAttribute('value', Product.allProducts[i].name);
-   selectElement.appendChild(listItem);
- }
+  var selectElement = document.getElementById('items');
+  for (var i = 0; i < Product.allProducts.length; i++) {
+    var listItem = document.createElement('option');
+    listItem.textContent = Product.allProducts[i].name;
+    listItem.setAttribute('value', Product.allProducts[i].name);
+    selectElement.appendChild(listItem);
+  }
 }
 
 // When someone submits the form, we need to add the selected item to the cart
@@ -53,9 +53,12 @@ function updateCartPreview() {
   var item = document.getElementById('items');
   var contents = document.getElementById('cartContents');
 
-
+  cartContents.appendChild(items);
+  cartContents.appendChild(quantity);
   // TODO: Add a new element to the cartContents div with that information
-}`1`
+}
+
+`1`;
 
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
