@@ -46,11 +46,14 @@ function addSelectedItemToCart() {
 // TODO: Save the contents of the cart to Local Storage
 function saveCartToLocalStorage() {
   localStorage.setItem('cart', JSON.stringify(Cart.allItems));
-  console.log(JSON.parse(localStorage.cart));
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var itemCount = Cart.allItems.length;
+  var countLocation = document.getElementById('itemCount');
+  countLocation.textContent = itemCount;
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
