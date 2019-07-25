@@ -5,6 +5,15 @@
 // TODO: Create a "Cart" constructor (named Cart) that has item and quantity
 // properties, and builds an array of items as you create instances
 
+var Cart = function(item, quantity) {
+  this.item = item;
+  this.quantity = quantity;
+  Cart.allItems.push(this);
+
+}
+Cart.allItems = [];
+
+
  
 
 // Product Contructor
