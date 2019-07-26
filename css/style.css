@@ -1,7 +1,7 @@
 /* TODO: Make it awesome */
 body {
-    height: 200vh;
-    background-color: #FFFCF2;
+    height: 100%;
+    background-color: #403D39;
     padding: 25px;
     font-size: 10px;
 }
@@ -43,6 +43,7 @@ ol {
     list-style: none;
     padding: 10px;
     border-bottom: solid 1px #FF4300;
+    text-align: center;
 }
 
 a {
@@ -53,9 +54,15 @@ a {
 
 main {
     position: relative;
-    height: 80vh;
+    height: 93%;
     background-color: #218DC6;
     margin: 0 -25px;
+    overflow: hidden;
+}
+
+main.cart-main {
+    height: 200vh;
+    overflow: visible;
 }
 
 main header h1 {
@@ -71,16 +78,19 @@ main header h1 {
 }
 
 .col-2 {
-    transform: translate(720px, -460px);
+    transform: translate(720px, -150px);
     width: 30%;
     height: auto;
 }
 
+form#catalog {
+    transform: translate(20px, -20px);
+}
+
 legend {
     text-align: left;
-    font-size: 2.5rem;
-    transform: translate(180px, -10px);
-    color: #403D39;
+    font-size: 3rem;
+    transform: translate(180px, -20px);    color: #403D39;
 }
 
 span {
@@ -94,13 +104,14 @@ input#quantity {
     font-size: 2rem;
     width: 100px;
     padding: 5px;
+    transform: translate(420px, -55px);
 }
 
 select#items {
     background-color: #CCC5B9;
     color: #403D39;
     font-size: 2rem;
-    margin-left: 10px;
+    margin: 0 10px;
     padding: 5px;
 }
 
@@ -108,16 +119,23 @@ input[type="submit"] {
     background-color: #FF4300;
     color: #403D39;
     border-color: #CCC5B9;
-    transform: translate(160px, 10px);
-    font-size: 2rem;
+    transform: translate(50px, 15px);
+    font-size: 1.5rem;
     padding: 10px;
-    
+
 }
 
 footer {
-    text-align: center;
     background-color: #403D39;
     margin: 0 -25px;
+    height: 30px;
+    position: relative;
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
 }
 
 table {
@@ -126,17 +144,18 @@ table {
     margin-right: auto;
     border: 3px solid #403D39;
     margin-top: 30px;
+    color: #403D39;
 
 }
 
 table thead {
     font-size: 2rem;
     border-bottom: 3px solid #403D39;
-    background-color: #196994;
+    background-color: transparent;
 }
 
 table tr:nth-child(even) {
-    background-color: #51afe1;
+    background-color: #CCC5B9;
 }
 
 table td {
@@ -144,6 +163,12 @@ table td {
     text-align: center;
     line-height: 3rem;
 }
+
+button {
+    color: #403D39;
+    background-color: #FF4300;
+}
+
 
 #itemCount {
     color: #FF4300;
