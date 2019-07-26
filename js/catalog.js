@@ -53,7 +53,7 @@ function saveCartToLocalStorage() {
 function updateCounter() {
   var itemCount = Cart.allItems.length;
   var countLocation = document.getElementById('itemCount');
-  countLocation.textContent = itemCount;
+  countLocation.textContent = ` (${itemCount})`;
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div

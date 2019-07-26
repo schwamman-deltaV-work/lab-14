@@ -1,8 +1,9 @@
 /* TODO: Make it awesome */
 body {
-    height: 100vh;
+    height: 200vh;
     background-color: #FFFCF2;
     padding: 25px;
+    font-size: 10px;
 }
 
 h1 {
@@ -29,7 +30,13 @@ li {
     display: inline;
     padding-left: 5px;
     color: #403D39;
-    font-size: 30px;
+    font-size: 2rem;
+}
+nav li {
+    display: inline-block;
+    margin-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 ol {
@@ -41,7 +48,7 @@ ol {
 a {
     color: #FF4300;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 main {
@@ -49,6 +56,11 @@ main {
     height: 80vh;
     background-color: #218DC6;
     margin: 0 -25px;
+}
+
+main header h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
 }
 
 .col-1 {
@@ -60,34 +72,36 @@ main {
 
 .col-2 {
     transform: translate(720px, -460px);
-    width: 40%;
-    height: 100%;
+    width: 30%;
+    height: auto;
 }
 
 legend {
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem;
     transform: translate(180px, -10px);
     color: #403D39;
 }
 
 span {
     color: #403D39;
-    font-size: 40px;
+    font-size: 2.3rem;
 }
 
 input#quantity {
     background-color: #CCC5B9;
     color: #403D39;
-    font-size: 30px;
-        width: 100px;
+    font-size: 2rem;
+    width: 100px;
+    padding: 5px;
 }
 
 select#items {
     background-color: #CCC5B9;
     color: #403D39;
-    font-size: 30px;
+    font-size: 2rem;
     margin-left: 10px;
+    padding: 5px;
 }
 
 input[type="submit"] {
@@ -95,11 +109,50 @@ input[type="submit"] {
     color: #403D39;
     border-color: #CCC5B9;
     transform: translate(160px, 10px);
-    font-size: 30px;
+    font-size: 2rem;
+    padding: 10px;
+    
 }
 
 footer {
     text-align: center;
     background-color: #403D39;
     margin: 0 -25px;
+}
+
+table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #403D39;
+    margin-top: 30px;
+
+}
+
+table thead {
+    font-size: 2rem;
+    border-bottom: 3px solid #403D39;
+    background-color: #196994;
+}
+
+table tr:nth-child(even) {
+    background-color: #51afe1;
+}
+
+table td {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+#itemCount {
+    color: #FF4300;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 5px;
+}
+
+.copy li {
+    font-size: 1.5rem;
+
 }
